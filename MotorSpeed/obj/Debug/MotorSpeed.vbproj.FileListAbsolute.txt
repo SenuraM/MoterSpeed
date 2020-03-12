@@ -1,0 +1,11 @@
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\bin\Debug\MotorSpeed.exe.config
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\bin\Debug\MotorSpeed.exe
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\bin\Debug\MotorSpeed.pdb
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\bin\Debug\MotorSpeed.xml
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.vbprojAssemblyReference.cache
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.Form1.resources
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.Resources.resources
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.vbproj.GenerateResource.cache
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.exe
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.xml
+D:\Education\Workspace\VisualStudio\MotorSpeed\MotorSpeed\obj\Debug\MotorSpeed.pdb
