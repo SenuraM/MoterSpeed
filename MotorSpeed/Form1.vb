@@ -6,6 +6,9 @@ Imports System.Threading
 Public Class Form1
 
     Dim MyPorts As Array
+    Dim value1 As Decimal
+    Dim value2 As Decimal
+    Delegate Sub SetTextCallBack(ByVal [text] As String)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MyPorts = IO.Ports.SerialPort.GetPortNames()
         PortComboBox.Items.AddRange(MyPorts)
@@ -36,6 +39,19 @@ Public Class Form1
     End Sub
 
     Private Sub ReceivedText(ByVal [text] As String)
+        If Me.InvokeRequired Then
+            Dim x As New SetTextCallBack(AddressOf ReceivedText)
+            Me.Invoke(x, New Object() {(text)})
+        Else
+            text = text + "," + "," + ","
+            Dim strinArra() As String
+            strinArra = text.Split(New Char() {","})
+            value1 = Convert.ToDecimal(strinArra(0))
+            value2 = Convert.ToDecimal(strinArra(1))
+
+            Chart1.Series("SpeedM1").Points.AddY(value1)
+            Chart1.Series("SpeedM2").Points.AddY(value2)
+        End If
 
 
     End Sub
@@ -55,4 +71,10 @@ Public Class Form1
         ConnectButton.Enabled = True
         ConnectButton.BringToFront()
     End Sub
+
+    Private Sub WriteButton_Click(sender As Object, e As EventArgs) Handles WriteButton.Click
+        SerialPort1.Write(InputTextBox.Text & vbCr)
+    End Sub
+
+
 End Class

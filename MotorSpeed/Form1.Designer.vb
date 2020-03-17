@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.PortComboBox = New System.Windows.Forms.ComboBox()
         Me.BaudComboBox = New System.Windows.Forms.ComboBox()
         Me.ConnectButton = New System.Windows.Forms.Button()
@@ -37,6 +37,8 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ScanButton = New System.Windows.Forms.Button()
+        Me.InputTextBox = New System.Windows.Forms.RichTextBox()
+        Me.WriteButton = New System.Windows.Forms.Button()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -80,25 +82,33 @@ Partial Class Form1
         '
         'Chart1
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend3)
-        Me.Chart1.Location = New System.Drawing.Point(56, 132)
+        Me.Chart1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(-1, 130)
         Me.Chart1.Name = "Chart1"
-        Series5.ChartArea = "ChartArea1"
-        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series5.Legend = "Legend1"
-        Series5.Name = "SpeedM1"
-        Series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-        Series6.ChartArea = "ChartArea1"
-        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series6.Legend = "Legend1"
-        Series6.Name = "SpeedM2"
-        Series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-        Me.Chart1.Series.Add(Series5)
-        Me.Chart1.Series.Add(Series6)
-        Me.Chart1.Size = New System.Drawing.Size(585, 287)
+        Series1.BorderWidth = 3
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series1.Color = System.Drawing.Color.Blue
+        Series1.Legend = "Legend1"
+        Series1.MarkerBorderWidth = 50
+        Series1.MarkerSize = 10
+        Series1.MarkerStep = 5
+        Series1.Name = "SpeedM1"
+        Series2.BorderWidth = 3
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series2.Color = System.Drawing.Color.Red
+        Series2.Legend = "Legend1"
+        Series2.Name = "SpeedM2"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Series.Add(Series2)
+        Me.Chart1.Size = New System.Drawing.Size(830, 413)
         Me.Chart1.TabIndex = 4
         Me.Chart1.Text = "Chart1"
         '
@@ -129,11 +139,31 @@ Partial Class Form1
         Me.ScanButton.Text = "Scan"
         Me.ScanButton.UseVisualStyleBackColor = True
         '
+        'InputTextBox
+        '
+        Me.InputTextBox.Location = New System.Drawing.Point(65, 36)
+        Me.InputTextBox.Name = "InputTextBox"
+        Me.InputTextBox.Size = New System.Drawing.Size(162, 60)
+        Me.InputTextBox.TabIndex = 8
+        Me.InputTextBox.Text = ""
+        '
+        'WriteButton
+        '
+        Me.WriteButton.Location = New System.Drawing.Point(253, 49)
+        Me.WriteButton.Name = "WriteButton"
+        Me.WriteButton.Size = New System.Drawing.Size(89, 36)
+        Me.WriteButton.TabIndex = 9
+        Me.WriteButton.Text = "Write"
+        Me.WriteButton.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(830, 542)
+        Me.Controls.Add(Me.WriteButton)
+        Me.Controls.Add(Me.InputTextBox)
         Me.Controls.Add(Me.ScanButton)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -160,4 +190,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ScanButton As Button
+    Friend WithEvents InputTextBox As RichTextBox
+    Friend WithEvents WriteButton As Button
 End Class
